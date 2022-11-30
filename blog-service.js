@@ -165,7 +165,7 @@ function getPostById(identity) {
         where: { id: identity },
       })
         .then(function (data) {
-          resolve(data);
+          resolve(data[0]);
         })
         .catch(function () {
           reject(console.log("no results returned"));
